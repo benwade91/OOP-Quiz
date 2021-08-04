@@ -1,7 +1,12 @@
-class User:
-    pass
+from question_model import Question
+from data import question_data
 
+question_bank = []
 
-user_1 = User()
+for question in question_data:
+    text = question['text']
+    answer = question['answer']
+    new_question = Question(text, answer)
+    question_bank.append(new_question)
 
-print(User)
+print(question_bank)
