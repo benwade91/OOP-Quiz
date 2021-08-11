@@ -8,3 +8,9 @@ class QuizBrain:
                        f"{self.question_list[self.question_number].question} (True / False)? ").lower()
         print(answer)
         self.question_number += 1
+
+    def still_has_question(self):
+        if len(self.question_list) == self.question_number:
+            return False
+        else:
+            return True
