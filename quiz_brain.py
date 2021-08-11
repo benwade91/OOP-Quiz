@@ -10,12 +10,13 @@ class QuizBrain:
 
         self.check_answer(answer, self.question_list[self.question_number].answer)
         self.question_number += 1
+        print(f"Your score is {self.score}/{self.question_number}\n\n")
 
     def still_has_question(self):
         return len(self.question_list) > self.question_number
 
     def check_answer(self, user_answer, correct_answer):
-        if user_answer.lower() == correct_answer.lower():
+        if user_answer == correct_answer.lower():
             print("Thats Right!")
             self.score += 1
         else:
